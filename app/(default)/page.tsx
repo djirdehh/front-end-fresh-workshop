@@ -11,32 +11,37 @@ import Cta from "@/components/cta";
 const faqs = [
   {
     title: "What is this?",
-    text: "This is a workshop bootcamp designed by Hassan Djirdeh that's expected to begin in a few months. This landing page aims to just gather interest and keep you informed about the upcoming event.",
+    text: "This is a workshop bootcamp designed by Hassan Djirdeh, expected to begin in a few months. This landing page is for gathering interest and keeping you informed about the event.",
     active: true,
   },
   {
     title: "Is this a paid program?",
-    text: "Yes, this will be a paid program. The cost will be between $99 - $199 for a full four-week workshop.",
+    text: "Yes, the program will cost between $199 - $299 for the full four-week workshop. Pricing details are still being finalized.",
+    active: false,
+  },
+  {
+    title: "What is the commitment to the workshop?",
+    text: "The commitment involves 1 to 2 hours of live online sessions at around 7 PM EST each week. Additionally, there will be self-paced learning and reading between sessions to reinforce and expand on the topics covered.",
     active: false,
   },
   {
     title: "When does this start?",
-    text: "This is expected to start in a few months. Exact dates will be communicated to those who join the waitlist.",
+    text: "The workshop is expected to start in a few months if we get enough sign-ups/interest. Exact dates will be communicated to those on the waitlist.",
     active: false,
   },
   {
     title: "What happens if I add my email to the waitlist?",
-    text: "By adding your email to the waitlist, you'll receive updates about the workshop, including the start date, pricing, and other important details. You'll be the first to know when registration opens.",
+    text: "You’ll receive updates about the workshop, including start dates, pricing, and other important details. You'll also be the first to know when registration opens.",
     active: false,
   },
   {
     title: "When can I hear more?",
-    text: "You can expect to hear more about the workshop in the coming weeks. We will send out regular updates to keep you informed about the progress and important announcements.",
+    text: "Expect more details in the coming weeks.",
     active: false,
   },
   {
     title: "Can I contact you?",
-    text: "Absolutely. You can contact us for any inquiries or additional information by emailing us at hassan.djirdeh@gmail.com.",
+    text: "Yes, you can contact us for inquiries or additional information at hassan.djirdeh@gmail.com.",
     active: false,
   },
 ];
@@ -49,52 +54,61 @@ export default function Home() {
           <PageHeader
             className="mb-12"
             title="The Front-End Fresh Workshop"
-            description="A 4 week, once a week, evening workshop on all things front-end engineering. By Hassan Djirdeh."
+            description="A 4-week, once-a-week evening workshop on all things front-end and software engineering. By Hassan Djirdeh."
           >
-            Coming Soon
+            Launching Q3 2024
           </PageHeader>
 
           <SubscribeForm />
         </div>
       </div>
 
-      <div className="pt-8 pb-8 md:pb-20" id="faq">
+      <div className="pt-8 pb-8 md:pb-20" id="topics">
+        <div className="px-4 sm:px-6">
+          <PageHeader
+            className="mb-12"
+            title="Topics"
+            description="Covering a breadth of essential front-end engineering skills and knowledge."
+          >
+            What's in this workshop?
+          </PageHeader>
+        </div>
         <div className="px-4 sm:px-6">
           <div className="max-w-xs md:max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 xl:gap-9 xl:mx-8 max-md:-mx-3">
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    A 4-week (once-a-week) workshop
+                    Front-end engineering in 2024 and beyond
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    This workshop spans over four weeks with one session each
-                    week. It is designed to help you gain in-depth knowledge and
-                    hands-on experience in front-end development.
+                    Explore the latest trends, tools, and technologies shaping
+                    the future of front-end development. Stay ahead with
+                    insights into what's next.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Pricing Details
+                    Strategies to Building Large-Scale Web Apps
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    The cost for the full four-week workshop will be between
-                    $199 — $299. This includes live lessons, all materials, and
-                    access to exclusive resources.
+                    Learn best practices for building scalable, maintainable web
+                    applications. From architecture to deployment, gain hands-on
+                    tips for managing complex projects.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Led by Hassan Djirdeh
+                    Breaking into FAANG
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    Learn from Hassan Djirdeh, an expert in front-end
-                    development with extensive experience in building
-                    large-scale web applications.
+                    Get tips on how to break into top tech companies like Meta,
+                    Amazon, Apple, Netflix, and Google. Understand the
+                    recruitment process, required skills, and how to stand out.
                   </p>
                 </div>
               </div>
@@ -104,35 +118,37 @@ export default function Home() {
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Join the Waitlist
+                    Levelling Up from Junior to Senior to Staff
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    Add your email to the waitlist to receive updates about the
-                    workshop, including the start date, pricing, and other
-                    important details.
+                    Discover strategies to advance your software engineering
+                    career. Learn how to transition from junior developer to
+                    senior roles and beyond with practical advice and real-world
+                    examples.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Workshop Start Date
+                    Mastering React and Advanced JavaScript
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    The workshop is expected to start in a few months. Exact
-                    dates will be communicated to those who join the waitlist.
+                    Dive deep into advanced React concepts and JavaScript
+                    techniques. Enhance your skills with sessions on hooks,
+                    state management, performance optimization, and more.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Stay Informed
+                    Building a Personal Brand
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    You can expect to hear more about the workshop in the coming
-                    weeks. We will send out regular updates to keep you informed
-                    about the progress and important announcements.
+                    Understand the importance of building a personal brand and
+                    networking in the tech industry. Learn how to create an
+                    impactful online presence and connect with industry leaders.
                   </p>
                 </div>
               </div>

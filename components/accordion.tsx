@@ -44,7 +44,9 @@ export default function Accordion({
               <path
                 opacity=".72"
                 d="m2 .586 3 3 3-3L9.414 2 5.707 5.707a1 1 0 0 1-1.414 0L.586 2 2 .586Z"
-                className={`transform origin-center transition duration-200 ease-out ${accordionOpen && "!rotate-180"}`}
+                className={`transform origin-center transition duration-200 ease-out ${
+                  accordionOpen && "!rotate-180"
+                }`}
               />
             </svg>
           </span>
@@ -54,7 +56,11 @@ export default function Accordion({
         id={`faqs-text-${id}`}
         role="region"
         aria-labelledby={`faqs-title-${id}`}
-        className={`grid text-sm text-gray-600 dark:text-gray-500 overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+        className={`grid text-sm text-gray-700 dark:text-gray-400 overflow-hidden transition-all duration-300 ease-in-out ${
+          accordionOpen
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
       >
         <div className="overflow-hidden">
           <p className="px-4 pb-2">{children}</p>

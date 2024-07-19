@@ -32,9 +32,9 @@ export default function Header() {
                 <li>
                   <Link
                     className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
-                    href="#home"
+                    href="#topics"
                   >
-                    Home
+                    Topics
                   </Link>
                 </li>
                 <li>

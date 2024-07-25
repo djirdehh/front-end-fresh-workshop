@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Home",
-  description: "Page description",
+  title: "The Front-End Fresh Workshop",
+  description:
+    "A 4-week, once-a-week evening workshop on all things front-end and software engineering. By Hassan Djirdeh.",
 };
 
 import PageHeader from "@/components/page-header";
@@ -84,14 +85,14 @@ export default function Home() {
                   <p className="text-sm text-gray-700 dark:text-gray-400">
                     Explore the latest trends, tools, and technologies shaping
                     the future of front-end development. Stay ahead with
-                    insights into what's next.
+                    insights into what’s next.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/70 to-white/50 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
                 <div className="grow mb-3">
                   <div className="font-inter-tight font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                    Strategies to Building Large-Scale Web Apps
+                    Building Large-Scale Web Apps
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
                     Learn best practices for building scalable, maintainable web
@@ -146,9 +147,9 @@ export default function Home() {
                     Building a Personal Brand
                   </div>
                   <p className="text-sm text-gray-700 dark:text-gray-400">
-                    Understand the importance of building a personal brand and
-                    networking in the tech industry. Learn how to create an
-                    impactful online presence and connect with industry leaders.
+                    Understand the importance of building a personal brand,
+                    networking in the tech industry, and learn how to create an
+                    impactful online presence.
                   </p>
                 </div>
               </div>

@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center py-8">
-            <p className="text-sm text-gray-700 dark:text-gray-400">
+            <p className="text-md text-gray-700 dark:text-gray-400">
               © By{" "}
               <a
-                className="font-medium text-indigo-500 hover:underline"
+                className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
                 href="https://www.linkedin.com/in/hassandjirdeh/"
                 target="_blank"
               >

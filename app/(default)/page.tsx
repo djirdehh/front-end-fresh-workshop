@@ -55,7 +55,20 @@ export default function Home() {
           <PageHeader
             className="mb-12"
             title="The Front-End Fresh Workshop"
-            description="A 4-week, once-a-week evening workshop on all things front-end and software engineering. By Hassan Djirdeh."
+            description={
+              <span className="text-lg text-gray-700 dark:text-gray-400">
+                A 4-week, once-a-week evening workshop on all things front-end
+                and software engineering. By{" "}
+                <a
+                  className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                  href="https://www.linkedin.com/in/hassandjirdeh/"
+                  target="_blank"
+                >
+                  Hassan Djirdeh
+                </a>
+                .
+              </span>
+            }
           >
             Launching Q3 2024
           </PageHeader>

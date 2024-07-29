@@ -2,8 +2,7 @@ type Post = {
   id: number;
   title: string;
   content: string;
-  author: string;
-  authorImage: string;
+  authorImage: string | React.JSX;
   date: string;
   category: string;
 };

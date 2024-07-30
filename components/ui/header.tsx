@@ -46,6 +46,30 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
+                    className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
+                    href="#instructor"
+                  >
+                    Instructor
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
+                    href="#agenda"
+                  >
+                    Agenda
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="font-bold text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
+                    href="#book"
+                  >
+                    Book Your Spot
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 transition-colors py-1.5 px-3"
                     href="#faq"
                   >

@@ -236,18 +236,18 @@ export default function Home() {
         <Posts posts={agenda} />
       </div>
 
-      <div className="pt-12 pb-12 md:pb-20" id="join">
+      <div className="pt-12 pb-12 md:pb-20" id="book">
         <div className="px-4 sm:px-6">
           <PageHeader
             className="mb-12 md:mb-20"
-            title="Join the Workshop"
-            description="Secure Your Spot Now!"
+            title="Book Your Spot"
+            description="Secure your spot and join the workshop when we begin!"
           >
             Pay once or in instalments
           </PageHeader>
 
           <div className="relative flex items-center justify-center gap-10 before:h-px before:w-full before:border-b before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] before:shadow-sm before:shadow-white/20 dark:before:shadow-none after:h-px after:w-full after:border-b after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] after:shadow-sm after:shadow-white/20 dark:after:shadow-none mb-16 pb-3">
-            <div className="w-full max-w-xs mx-auto shrink-0">
+            <div className="w-full max-w-[350px] mx-auto shrink-0">
               <div className="relative flex flex-col h-full p-5 rounded-2xl bg-gradient-to-tr from-white/100 to-white/60 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40">
                 <div className="mb-4">
                   <div className="font-medium underline underline-offset-4 decoration-gray-300 text-gray-800 dark:text-gray-200 mb-1">

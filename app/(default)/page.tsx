@@ -324,11 +324,54 @@ export default function Home() {
                 <div className="mt-6">
                   <a
                     className="btn-sm py-1.5 rounded-lg text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
-                    href="#0"
+                    href="https://book.stripe.com/7sI4ii94JaRRddm6oo"
+                    target="_blank"
                   >
-                    Book now
+                    Book now with Stripe
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 xl:gap-9 xl:mx-8 max-md:-mx-3">
+            <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/80 to-white/60 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
+              <div className="grow mb-3">
+                <p className="font-inter-tight text-lg font-semibold text-gray-700 dark:text-gray-200 mb-1">
+                  What happens after I book?
+                </p>
+                <p className="text-md text-gray-700 dark:text-gray-300">
+                  We'll add you to the workshop Slack Channel, share details and
+                  additional communication on the next steps, including how to
+                  join the workshop when it begins.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-lg bg-gradient-to-tr from-white/80 to-white/60 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40 p-5">
+              <div className="grow mb-3">
+                <p className="font-inter-tight text-lg font-semibold text-gray-700 dark:text-gray-200 mb-1">
+                  Do you support PayPal?
+                </p>
+                <p className="text-md text-gray-700 dark:text-gray-300">
+                  If you'd like to make a full payment through PayPal, send the
+                  payment using this{" "}
+                  <a
+                    href="https://www.paypal.com/paypalme/djirdehh"
+                    target="_blank"
+                    className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
+                    PayPal link
+                  </a>{" "}
+                  and email us at{" "}
+                  <a
+                    href="mailto:hassan.djirdeh@gmail.com"
+                    target="_blank"
+                    className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
+                    hassan.djirdeh@gmail.com
+                  </a>{" "}
+                  your name and email confirming the payment was sent.
+                </p>
               </div>
             </div>
           </div>

@@ -182,10 +182,10 @@ export default function Home() {
         <div className="px-4 sm:px-6">
           <PageHeader
             className="max-w-5xl mb-8"
-            title="Instructor"
+            title="Hi 👋🏾!"
             description={
               <span>
-                Hi 👋🏾! I'm <b>Hassan</b>. As a{" "}
+                I'm <b>Hassan</b>. As a{" "}
                 <a
                   className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
                   href="https://largeapps.dev/"
@@ -197,12 +197,12 @@ export default function Home() {
                 experience at DoorDash, Instacart, and Shopify, I have a passion
                 for teaching and sharing my knowledge. Join me in this workshop
                 to take your front-end engineering skills to the next level.
-                Register today to receive updates, more information, and to join
-                the workshop when we begin on Sept 26th!
+                Register today to secure your spot, receive updates, and to join
+                the workshop when we begin on Sept 25th!
               </span>
             }
           >
-            Hassan Djirdeh
+            Instructor
           </PageHeader>
 
           <div className="max-w-3xl mx-auto">
@@ -250,10 +250,21 @@ export default function Home() {
             <div className="w-full max-w-[350px] mx-auto shrink-0">
               <div className="relative flex flex-col h-full p-5 rounded-2xl bg-gradient-to-tr from-white/100 to-white/60 dark:bg-gradient-to-b dark:from-gray-700/50 dark:to-gray-700/40">
                 <div className="mb-4">
-                  <div className="font-medium underline underline-offset-4 decoration-gray-300 text-gray-800 dark:text-gray-200 mb-1">
-                    One-time payment
+                  <div className="flex justify-between">
+                    <div className="font-medium underline underline-offset-4 decoration-gray-300 text-gray-800 dark:text-gray-200 mb-1">
+                      One-time payment
+                    </div>
+                    <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                      Early bird pricing
+                    </span>
                   </div>
                   <div className="flex items-baseline pb-4 mb-4 border-b border-gray-500 dark:border-gray-200 border-dashed">
+                    <span className="text-2xl text-gray-900 dark:text-gray-100 line-through font-bold">
+                      $
+                    </span>
+                    <span className="text-4xl mr-2 text-gray-900 dark:text-gray-100 line-through font-bold tabular-nums">
+                      249
+                    </span>
                     <span className="text-2xl text-gray-900 dark:text-gray-100 font-bold">
                       $
                     </span>
@@ -265,8 +276,8 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="grow text-sm font-semibold text-gray-700 dark:text-gray-200">
-                    Book now to take advantage of this price and secure your
-                    spot in the workshop.
+                    Book now to take advantage of this early bird price and
+                    secure your spot in the workshop.
                   </div>
                 </div>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 grow">

@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     title: "Is this a paid program?",
-    text: "Yes, the program will cost $199 USD for the full four-week workshop.",
+    text: "Yes, the program currently costs $199 USD for early bird registration. The price will increase to $249 USD shortly, so secure your spot now!",
     active: false,
   },
   {
@@ -36,8 +36,8 @@ const faqs = [
     active: false,
   },
   {
-    title: "What happens if I add my email to the waitlist?",
-    text: "You’ll receive updates about the workshop, including start dates, pricing, and other important details. You'll also be the first to know when registration opens.",
+    title: "What happens after I book?",
+    text: "We'll send you an email shortly and add you to the workshop Slack community. The Slack community is where you'll be able to ask questions, follow along on all workshop details and additional communication from us, and where you'll connect with fellow attendees.",
     active: false,
   },
   {
@@ -252,7 +252,7 @@ export default function Home() {
             title="Book Your Spot"
             description="Secure your spot and join the workshop when we begin!"
           >
-            Pay once or in instalments
+            Early bird registration
           </PageHeader>
 
           <div className="relative flex items-center justify-center gap-10 before:h-px before:w-full before:border-b before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] before:shadow-sm before:shadow-white/20 dark:before:shadow-none after:h-px after:w-full after:border-b after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] after:shadow-sm after:shadow-white/20 dark:after:shadow-none mb-16 pb-3">

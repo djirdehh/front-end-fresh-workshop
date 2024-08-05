@@ -77,7 +77,7 @@ export default function Home() {
               </span>
             }
           >
-            Beginning Sept 2024
+            Beginning Sept 25th 2024
           </PageHeader>
 
           <BookForm />
@@ -228,7 +228,16 @@ export default function Home() {
           <PageHeader
             className="mb-12 md:mb-20"
             title="Agenda"
-            description="A 4-week, once-a-week evening workshop to level up your front-end and software engineering skills."
+            description={
+              <span className="text-lg text-gray-700 dark:text-gray-300">
+                A 4-week, once-a-week evening workshop to level up your
+                front-end and software engineering skills.{" "}
+                <span className="font-semibold">
+                  Each session will be a 1 hour and 30 minute live lecture
+                  starting at approximately 7:00 PM ET.
+                </span>
+              </span>
+            }
           >
             Workshop Details
           </PageHeader>
@@ -289,7 +298,10 @@ export default function Home() {
                     >
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
-                    <span>Weekly 1 hour and 30 min of live online classes</span>
+                    <span>
+                      4 live online lectures on Wednesdays at 7:30 PM ET (first
+                      lecture on Sept 25)
+                    </span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -309,7 +321,7 @@ export default function Home() {
                     >
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
-                    <span>Lecture Slides + Google Docs + Code Examples</span>
+                    <span>Lecture slides, Google Docs, and code examples</span>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -329,7 +341,7 @@ export default function Home() {
                     >
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
-                    <span>and more!</span>
+                    <span>And more!</span>
                   </li>
                 </ul>
                 <div className="mt-6">
@@ -338,7 +350,7 @@ export default function Home() {
                     href="https://book.stripe.com/7sI4ii94JaRRddm6oo"
                     target="_blank"
                   >
-                    Book now with Stripe
+                    Book now
                   </a>
                 </div>
               </div>
@@ -352,9 +364,11 @@ export default function Home() {
                   What happens after I book?
                 </p>
                 <p className="text-md text-gray-700 dark:text-gray-300">
-                  We'll add you to the workshop Slack Channel, share details and
-                  additional communication on the next steps, including how to
-                  join the workshop when it begins.
+                  We'll send you an email shortly and add you to the workshop
+                  Slack community. The Slack community is where you'll be able
+                  to ask questions, follow along on all workshop details and
+                  additional communication from us, and where you'll connect
+                  with fellow attendees.
                 </p>
               </div>
             </div>

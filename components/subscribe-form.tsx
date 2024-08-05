@@ -54,7 +54,7 @@ export default function SubscribeForm() {
     >
       {loading && (
         <svg
-          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+          className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-100 dark:text-gray-800"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -74,7 +74,7 @@ export default function SubscribeForm() {
           ></path>
         </svg>
       )}
-      Join the newsletter
+      Join the mailing list
     </button>
   );
 

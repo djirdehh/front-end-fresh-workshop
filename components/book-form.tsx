@@ -2,136 +2,32 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
-import Avatar03 from "@/public/images/avatar-03.jpg";
-import Avatar04 from "@/public/images/avatar-04.jpg";
-import Avatar05 from "@/public/images/avatar-05.jpg";
+import Link from "next/link";
 
-export default function SubscribeForm() {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-
-  const successMessage = "You've been added to the waitlist!";
-  const errorMessage =
-    "An error occurred for some reason. Reach out to me through email if things continue to not work.";
-
-  const handleSubmit = async (event: any) => {
-    event.preventDefault();
-    setLoading(true);
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setEmail("");
-        setMessage(successMessage);
-      } else {
-        setMessage(errorMessage);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setMessage(errorMessage);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  let waitListButton = (
-    <button
+export default function BookForm() {
+  let bookButton = (
+    <Link
       className="disabled:bg-gray-600 btn text-gray-100 bg-gray-900 hover:bg-gray-800 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-white w-full"
-      type="submit"
-      disabled={loading}
+      href="#book"
     >
-      {loading && (
-        <svg
-          className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-100 dark:text-gray-800"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"
-          ></circle>
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          ></path>
-        </svg>
-      )}
-      Join the mailing list
-    </button>
+      Book now for $199&nbsp;
+      <span className="line-through text-gray-100/50 dark:text-gray-800/50">
+        $249
+      </span>
+    </Link>
   );
-
-  if (message === successMessage) {
-    waitListButton = (
-      <button
-        className="disabled:bg-gray-600 btn text-gray-100 bg-gray-900 hover:bg-gray-800 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-white w-full"
-        type="submit"
-        disabled
-      >
-        🎉 {successMessage}
-      </button>
-    );
-  }
 
   return (
     <>
       <div className="relative flex items-center justify-center gap-10 before:h-px before:w-full before:border-b before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] before:shadow-sm before:shadow-white/20 dark:before:shadow-none after:h-px after:w-full after:border-b after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] after:shadow-sm after:shadow-white/20 dark:after:shadow-none mb-11">
         <div className="w-full max-w-xs mx-auto shrink-0">
-          <form className="relative" onSubmit={handleSubmit}>
+          <form className="relative">
             <div
               className="absolute -inset-3 bg-indigo-500/15 dark:bg-transparent dark:bg-gradient-to-b dark:from-gray-700/80 dark:to-gray-700/70 rounded-lg -z-10 before:absolute before:inset-y-0 before:left-0 before:w-[15px] before:bg-[length:15px_15px] before:[background-position:top_center,bottom_center] before:bg-no-repeat before:[background-image:radial-gradient(circle_at_center,theme(colors.indigo.500/.56)_1.5px,transparent_1.5px),radial-gradient(circle_at_center,theme(colors.indigo.500/.56)_1.5px,transparent_1.5px)] dark:before:[background-image:radial-gradient(circle_at_center,theme(colors.gray.600)_1.5px,transparent_1.5px),radial-gradient(circle_at_center,theme(colors.gray.600)_1.5px,transparent_1.5px)] after:absolute after:inset-y-0 after:right-0 after:w-[15px] after:bg-[length:15px_15px] after:[background-position:top_center,bottom_center] after:bg-no-repeat after:[background-image:radial-gradient(circle_at_center,theme(colors.indigo.500/.56)_1.5px,transparent_1.5px),radial-gradient(circle_at_center,theme(colors.indigo.500/.56)_1.5px,transparent_1.5px)] dark:after:[background-image:radial-gradient(circle_at_center,theme(colors.gray.600)_1.5px,transparent_1.5px),radial-gradient(circle_at_center,theme(colors.gray.600)_1.5px,transparent_1.5px)]"
               aria-hidden="true"
             />
             <div className="space-y-3">
-              <div>
-                <label className="sr-only" htmlFor="email">
-                  Email
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 text-gray-500/70 dark:text-gray-400/70 pl-4 flex items-center pointer-events-none">
-                    <svg
-                      className="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={14}
-                    >
-                      <path d="M14 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm0 12H2V5.723l5.504 3.145a.998.998 0 0 0 .992 0L14 5.723V12Zm0-8.58L8 6.849 2 3.42V2h12v1.42Z" />
-                    </svg>
-                  </div>
-                  <input
-                    id="email"
-                    className="form-input text-sm w-full pl-10 pr-4"
-                    type="email"
-                    placeholder="Your email..."
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div>{waitListButton}</div>
-              {message === errorMessage && (
-                <p className="text-sm text-center text-red-500 dark:text-red-400">
-                  {errorMessage}
-                </p>
-              )}
+              <div>{bookButton}</div>
             </div>
           </form>
         </div>

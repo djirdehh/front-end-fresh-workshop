@@ -11,7 +11,7 @@ export default function Footer() {
             <p className="text-md text-gray-700 dark:text-gray-400">
               © By{" "}
               <a
-                className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
                 href="https://www.linkedin.com/in/hassandjirdeh/"
                 target="_blank"
               >

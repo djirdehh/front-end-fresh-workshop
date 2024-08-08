@@ -386,8 +386,8 @@ export default function Home() {
                     className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
                   >
                     PayPal link
-                  </a>{" "}
-                  and email us at{" "}
+                  </a>
+                  . Once complete, send us an email us at{" "}
                   <a
                     href="mailto:hassan.djirdeh@gmail.com"
                     target="_blank"
@@ -395,7 +395,8 @@ export default function Home() {
                   >
                     hassan.djirdeh@gmail.com
                   </a>{" "}
-                  your name and email confirming the payment was sent.
+                  mentioning your name and email and confirming the payment was
+                  sent.
                 </p>
               </div>
             </div>

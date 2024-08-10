@@ -44,7 +44,7 @@ export default function Header() {
                     Topics
                   </Link>
                 </li>
-                <li>
+                <li className="hidden sm:block">
                   <Link
                     className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
                     href="#instructor"
@@ -76,7 +76,7 @@ export default function Header() {
                     Book
                   </Link>
                 </li>
-                <li>
+                <li className="hidden sm:block">
                   <Link
                     className="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 transition-colors py-1.5 px-3"
                     href="#faq"

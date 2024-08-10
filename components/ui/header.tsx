@@ -60,12 +60,20 @@ export default function Header() {
                     Agenda
                   </Link>
                 </li>
-                <li>
+                <li className="hidden sm:block">
                   <Link
                     className="font-bold text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
                     href="#book"
                   >
                     Book Your Spot
+                  </Link>
+                </li>
+                <li className="block sm:hidden">
+                  <Link
+                    className="font-bold text-gray-800 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800/30 py-1.5 px-3"
+                    href="#book"
+                  >
+                    Book
                   </Link>
                 </li>
                 <li>

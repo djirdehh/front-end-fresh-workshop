@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import PageHeader from "@/components/page-header";
 import Link from "next/link";
+import { Suspense } from 'react';
 
 const STRIPE_LINKS = {
   default: "https://book.stripe.com/7sI4ii94JaRRddm6oo",
@@ -12,7 +13,7 @@ const STRIPE_LINKS = {
 const PAYPAL_LINK = "https://www.paypal.com/paypalme/djirdehh";
 const EMAIL_LINK = "mailto:hassan.djirdeh@gmail.com";
 
-export default function BookSection() {
+function BookSectionContent() {
   const searchParams = useSearchParams();
   const hasSpecialParam = searchParams.has('building-large-scale-apps');
   const bookLink = hasSpecialParam ? STRIPE_LINKS.earlyBird : STRIPE_LINKS.default;
@@ -176,5 +177,13 @@ export default function BookSection() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BookSection() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BookSectionContent />
+    </Suspense>
   );
 }

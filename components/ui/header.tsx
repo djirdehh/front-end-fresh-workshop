@@ -3,8 +3,9 @@ import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./theme-toggle";
+import { Suspense } from 'react';
 
-export default function Header() {
+function HeaderContent() {
   const searchParams = useSearchParams();
   const showBanner = searchParams.get('building-large-scale-apps') !== null;
 
@@ -107,5 +108,13 @@ export default function Header() {
         </div>
       </header>
     </>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HeaderContent />
+    </Suspense>
   );
 }

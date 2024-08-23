@@ -182,7 +182,7 @@ function BookSectionContent() {
 
 export default function BookSection() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <BookSectionContent />
     </Suspense>
   );

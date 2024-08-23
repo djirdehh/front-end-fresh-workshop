@@ -113,7 +113,7 @@ function HeaderContent() {
 
 export default function Header() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <HeaderContent />
     </Suspense>
   );

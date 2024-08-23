@@ -3,6 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Avatar01 from "@/public/images/avatar-01.jpg";
+import Avatar02 from "@/public/images/avatar-02.jpg";
+import Avatar03 from "@/public/images/avatar-03.jpg";
+import Avatar04 from "@/public/images/avatar-04.jpg";
+import Avatar05 from "@/public/images/avatar-05.jpg";
 
 export default function BookForm() {
   let bookButton = (
@@ -32,8 +37,7 @@ export default function BookForm() {
           </form>
         </div>
       </div>
-      {/* (to-do) Add when sign-ups arrive */}
-      {/* <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="text-center">
           <ul className="flex justify-center -space-x-2 mb-4">
             <li>
@@ -82,15 +86,15 @@ export default function BookForm() {
               />
             </li>
           </ul>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 dark:text-gray-300">
             Join the{" "}
-            <span className="text-gray-700 dark:text-gray-200 font-medium">
-              2.000+
+            <span className="text-indigo-600 dark:text-indigo-400 font-medium">
+              17+
             </span>{" "}
-            members who have already signed up.
+            members who have already signed up for this cohort.
           </p>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }

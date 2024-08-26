@@ -89,7 +89,7 @@ export default function BookForm() {
           <p className="text-sm text-gray-500 dark:text-gray-300">
             Join the{" "}
             <span className="text-indigo-600 dark:text-indigo-400 font-medium">
-              17+
+              18+
             </span>{" "}
             members who have already signed up for this cohort.
           </p>

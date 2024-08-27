@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import Avatar03 from "@/public/images/avatar-03.jpg";
 import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 
-export default function BookForm() {
+function BookFormContent() {
   const searchParams = useSearchParams();
   const hasSpecialParam = searchParams.has('building-large-scale-apps');
 
@@ -107,5 +107,13 @@ export default function BookForm() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function BookForm() {
+  return (
+    <Suspense>
+      <BookFormContent />
+    </Suspense>
   );
 }

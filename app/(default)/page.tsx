@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     title: "Is this a paid program?",
-    text: "Yes, the program currently costs $199 USD for early bird registration. The price will increase to $249 USD shortly, so secure your spot now!",
+    text: "Yes, the program costs $249 USD for the full workshop.",
     active: false,
   },
   {

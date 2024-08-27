@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 import Avatar01 from "@/public/images/avatar-01.jpg";
@@ -10,7 +11,10 @@ import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 
 export default function BookForm() {
-  let bookButton = (
+  const searchParams = useSearchParams();
+  const hasSpecialParam = searchParams.has('building-large-scale-apps');
+
+  let bookButton = hasSpecialParam ? (
     <Link
       className="disabled:bg-gray-600 btn text-gray-100 bg-gray-900 hover:bg-gray-800 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-white w-full"
       href="#book"
@@ -19,6 +23,13 @@ export default function BookForm() {
       <span className="line-through text-gray-100/50 dark:text-gray-800/50">
         $249
       </span>
+    </Link>
+  ) : (
+    <Link
+      className="disabled:bg-gray-600 btn text-gray-100 bg-gray-900 hover:bg-gray-800 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-white w-full"
+      href="#book"
+    >
+      Book now for $249
     </Link>
   );
 

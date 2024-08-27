@@ -26,7 +26,7 @@ function BookSectionContent() {
           title="Book Your Spot"
           description="Secure your spot and join the workshop when we begin!"
         >
-          Early bird registration
+          Registration
         </PageHeader>
 
         <div className="relative flex items-center justify-center gap-10 before:h-px before:w-full before:border-b before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:before:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] before:shadow-sm before:shadow-white/20 dark:before:shadow-none after:h-px after:w-full after:border-b after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.8),transparent)1] dark:after:[border-image:linear-gradient(to_right,transparent,theme(colors.indigo.300/.16),transparent)1] after:shadow-sm after:shadow-white/20 dark:after:shadow-none mb-16 pb-3">
@@ -37,30 +37,45 @@ function BookSectionContent() {
                   <div className="font-medium underline underline-offset-4 decoration-gray-300 text-gray-800 dark:text-gray-200 mb-1">
                     One-time payment
                   </div>
-                  <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                    Early bird pricing
-                  </span>
+                  {hasSpecialParam && <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                    Special pricing
+                  </span>}
                 </div>
                 <div className="flex items-baseline pb-4 mb-4 border-b border-gray-500 dark:border-gray-200 border-dashed">
-                  <span className="text-2xl text-gray-900 dark:text-gray-100 line-through font-bold">
-                    $
-                  </span>
-                  <span className="text-4xl mr-2 text-gray-900 dark:text-gray-100 line-through font-bold tabular-nums">
-                    249
-                  </span>
-                  <span className="text-2xl text-gray-900 dark:text-gray-100 font-bold">
-                    $
-                  </span>
-                  <span className="text-4xl text-gray-900 dark:text-gray-100 font-bold tabular-nums">
-                    199
-                  </span>
-                  <span className="text-sm text-gray-900 dark:text-gray-100 pl-1">
-                    USD
-                  </span>
+                  {hasSpecialParam ? (
+                    <>
+                      <span className="text-2xl text-gray-900 dark:text-gray-100 line-through font-bold">
+                        $
+                      </span>
+                      <span className="text-4xl mr-2 text-gray-900 dark:text-gray-100 line-through font-bold tabular-nums">
+                        249
+                      </span>
+                      <span className="text-2xl text-gray-900 dark:text-gray-100 font-bold">
+                        $
+                      </span>
+                      <span className="text-4xl text-gray-900 dark:text-gray-100 font-bold tabular-nums">
+                        199
+                      </span>
+                      <span className="text-sm text-gray-900 dark:text-gray-100 pl-1">
+                        USD
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-2xl text-gray-900 dark:text-gray-100 font-bold">
+                        $
+                      </span>
+                      <span className="text-4xl text-gray-900 dark:text-gray-100 font-bold tabular-nums">
+                        249
+                      </span>
+                      <span className="text-sm text-gray-900 dark:text-gray-100 pl-1">
+                        USD
+                      </span>
+                    </>
+                  )}
                 </div>
                 <div className="grow text-sm font-semibold text-gray-700 dark:text-gray-200">
-                  Book now to take advantage of this early bird price and
-                  secure your spot in the workshop.
+                  Book now to secure your spot in the workshop.
                 </div>
               </div>
               <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 grow">

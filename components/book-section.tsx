@@ -1,13 +1,13 @@
 "use client";
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from "next/navigation";
 import PageHeader from "@/components/page-header";
 import Link from "next/link";
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
 const STRIPE_LINKS = {
   default: "https://book.stripe.com/7sI4ii94JaRRddm6oo",
-  earlyBird: "https://book.stripe.com/4gw5mmbcRf87flucMN"
+  earlyBird: "https://book.stripe.com/4gw5mmbcRf87flucMN",
 };
 
 const PAYPAL_LINK = "https://www.paypal.com/paypalme/djirdehh";
@@ -15,8 +15,10 @@ const EMAIL_LINK = "mailto:hassan.djirdeh@gmail.com";
 
 function BookSectionContent() {
   const searchParams = useSearchParams();
-  const hasSpecialParam = searchParams.has('building-large-scale-apps');
-  const bookLink = hasSpecialParam ? STRIPE_LINKS.earlyBird : STRIPE_LINKS.default;
+  const hasSpecialParam = searchParams.has("building-large-scale-apps");
+  const bookLink = hasSpecialParam
+    ? STRIPE_LINKS.earlyBird
+    : STRIPE_LINKS.default;
 
   return (
     <div className="pt-12 pb-12 md:pb-20" id="book">
@@ -37,9 +39,11 @@ function BookSectionContent() {
                   <div className="font-medium underline underline-offset-4 decoration-gray-300 text-gray-800 dark:text-gray-200 mb-1">
                     One-time payment
                   </div>
-                  {hasSpecialParam && <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                    Special pricing
-                  </span>}
+                  {hasSpecialParam && (
+                    <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                      Special pricing
+                    </span>
+                  )}
                 </div>
                 <div className="flex items-baseline pb-4 mb-4 border-b border-gray-500 dark:border-gray-200 border-dashed">
                   {hasSpecialParam ? (
@@ -133,15 +137,6 @@ function BookSectionContent() {
                   <span>And more!</span>
                 </li>
               </ul>
-              <div className="mt-6">
-                <a
-                  className="btn-sm py-1.5 rounded-lg text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
-                  href={bookLink}
-                  target="_blank"
-                >
-                  Book now
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -154,10 +149,10 @@ function BookSectionContent() {
               </p>
               <p className="text-md text-gray-700 dark:text-gray-300">
                 We'll send you an email shortly and add you to the workshop
-                Slack community. The Slack community is where you'll be able
-                to ask questions, follow along on all workshop details and
-                additional communication from us, and where you'll connect
-                with fellow attendees.
+                Slack community. The Slack community is where you'll be able to
+                ask questions, follow along on all workshop details and
+                additional communication from us, and where you'll connect with
+                fellow attendees.
               </p>
             </div>
           </div>
